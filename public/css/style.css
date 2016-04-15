@@ -1,0 +1,48 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 60px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #222222;
+    padding: 0px;
+    color: white;
+}
+.custom {
+    margin-bottom: 10px;
+}
+#dashboard-nav {
+    margin-bottom: 20px;
+}
+#author {
+    line-height: 60px;
+    margin: 0px;
+    padding: 0px;
+}
+#main_content_img {
+    margin-bottom: 20px;
+}
+#comment-input {
+    font-size: 18px;
+    resize: none;
+    margin-bottom: 5px;
+}
+#comments-count {
+    margin-bottom: 30px;
+}
+.custom-comment-head {
+    margin: 0px;
+    padding: 0px;
+}
+.posted-by {
+    border-right: solid;
+    border-color: white;
+}
+#comment_content {
+    resize: none;
+}
