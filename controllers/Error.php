@@ -1,5 +1,7 @@
 <?php
-class Error extends Controller
+namespace err;
+
+class Error extends \Controller
 {
     public function __construct()
     {

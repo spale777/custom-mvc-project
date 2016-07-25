@@ -21,11 +21,12 @@ class Bootstrap
 
         $file = 'controllers/' . ucfirst($url_params[0]) . '.php';
 
+
         if (file_exists($file)){
             require $file;
         } else {
             require 'controllers/Error.php';
-            $controller = new Error();
+            $controller = new \err\Error();
             $controller->index();
             return false;
         }
@@ -42,8 +43,12 @@ class Bootstrap
         }
 
         // Ucitava kontroler i model za taj kontroler
-
-        $controller = new $control;
+        if($control == 'error'){
+            $control = '\err\\' . $control;
+            $controller = new $control;
+        } else {
+            $controller = new $control;
+        }
         $controller->loadModel($control);
 
         switch ($params_count) {
