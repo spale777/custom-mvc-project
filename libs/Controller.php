@@ -9,7 +9,7 @@ class Controller
     }
     public function loadModel($model)
     {
-        $file = 'models/' . $model . '_Model.php';
+        $file = ROOT . '/models/' . ucfirst($model) . '_Model.php';
 
         if(file_exists($file)){
             require $file;

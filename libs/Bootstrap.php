@@ -19,7 +19,7 @@ class Bootstrap
             return false;
         }
 
-        $file = 'controllers/' . $url_params[0] . '.php';
+        $file = 'controllers/' . ucfirst($url_params[0]) . '.php';
 
         if (file_exists($file)){
             require $file;
